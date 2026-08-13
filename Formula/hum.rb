@@ -1,17 +1,17 @@
 class Hum < Formula
   desc "Product-neutral local development orchestrator and terminal monitor"
   homepage "https://github.com/delaudio/hum"
-  version "0.4.0"
+  version "0.4.1"
 
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/delaudio/hum/releases/download/v0.4.0/hum-#{version}-macos-arm64.tar.gz"
-      sha256 "5a4653ea40e9e50cdce4b5e070ae63fa7c0389208044fea48e0418c6c756e96b"
+      url "https://github.com/delaudio/hum/releases/download/v0.4.1/hum-#{version}-macos-arm64.tar.gz"
+      sha256 "b78a58836cd90b9234f691812a4030888581bdbc82d001b396194560da4af664"
     else
-      url "https://github.com/delaudio/hum/releases/download/v0.4.0/hum-#{version}-macos-x86_64.tar.gz"
-      sha256 "c740dcceb48b34a5d7f3e5adc23b4409bbe37c6c66067265229cb7e635badd8e"
+      url "https://github.com/delaudio/hum/releases/download/v0.4.1/hum-#{version}-macos-x86_64.tar.gz"
+      sha256 "217f02c729ae1d8c723de0362d5a4d158211c33893087233323de6c8ecb9a556"
     end
   end
 
