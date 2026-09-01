@@ -1,17 +1,17 @@
 class Norn < Formula
   desc "Local-first review tooling from command line"
   homepage "https://github.com/delaudio/norn"
-  version "0.2.6"
+  version "0.2.7"
 
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/delaudio/norn/releases/download/v#{version}/norn-#{version}-macos-arm64.tar.gz"
-      sha256 "b408844a867cafc0b8fdb088e2576cedf001ce999047cba704b8d78389bfdd6a"
+      sha256 "86123a7db7eae947a4ca7402fcb7b422b679619735f533323b3d60c9fe202f38"
     else
       url "https://github.com/delaudio/norn/releases/download/v#{version}/norn-#{version}-macos-x86_64.tar.gz"
-      sha256 "8ba475a232ea72fc01e4d6dd02def92c798d82613550663f8e35a746a3a429cc"
+      sha256 "5b53fec9feac5f8c972725af58aff6f6c606277fa9fd09ce0477bd2bf5be2cb7"
     end
   end
 
