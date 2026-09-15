@@ -5,14 +5,12 @@ class Norn < Formula
 
   depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/delaudio/norn/releases/download/v#{version}/norn-#{version}-macos-arm64.tar.gz"
-      sha256 "b2e769a4f1f633382643036635ddcf867fdda20c07032436735372c19222d007"
-    else
-      url "https://github.com/delaudio/norn/releases/download/v#{version}/norn-#{version}-macos-x86_64.tar.gz"
-      sha256 "787981c89cde75af870f1a3a2e0cf1b74e85b98d33787489e1d12e53f71ef4c0"
-    end
+  if Hardware::CPU.arm?
+    url "https://github.com/delaudio/norn/releases/download/v#{version}/norn-#{version}-macos-arm64.tar.gz"
+    sha256 "b2e769a4f1f633382643036635ddcf867fdda20c07032436735372c19222d007"
+  else
+    url "https://github.com/delaudio/norn/releases/download/v#{version}/norn-#{version}-macos-x86_64.tar.gz"
+    sha256 "787981c89cde75af870f1a3a2e0cf1b74e85b98d33787489e1d12e53f71ef4c0"
   end
 
   def install
